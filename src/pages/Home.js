@@ -19,6 +19,15 @@ function Home() {
     setImgList([img1, img2, img3, img4]);
   }, [img1, img2, img3, img4]);
   const addKegiatan = (item) => {
+    if (item.length > 8) {
+      Swal.fire({
+        title: "Pemberitahuan!",
+        text: "Batas Kegiatan yang bisa dibuat adalah 8 kegiatan",
+        icon: "error",
+        confirmButtonText: "Periksa Kembali",
+      });
+      return;
+    }
     setKegiatan(item);
   };
 
@@ -187,9 +196,9 @@ function Home() {
                 style={{ flexWrap: "wrap" }}
                 className="d-flex flex-wrap justify-content-start"
               >
-                {imgList.map((v) =>
+                {imgList.map((v, i) =>
                   v !== "" ? (
-                    <img className="img-size-view " src={v} alt="img" />
+                    <img key={i} className="img-size-view " src={v} alt="img" />
                   ) : (
                     ""
                   )

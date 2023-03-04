@@ -10,7 +10,7 @@
 .text-font-list{
     margin-left: 20px;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 23px;
     color:black;
     height: 20%;
     padding-top: 15px;
@@ -34,7 +34,7 @@
 .wrap-img{
     background-color: white;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     padding-left: 10px;
     width: 1474px;
@@ -44,13 +44,13 @@
     z-index: 10;
     top:538px;
     color: black; 
-    justify-content: space-between;
     align-items: center;
 }
 .img-list{
-    border: #D5271D 4px solid;
+    border: black 4px solid;
     width: 24%;
     height: 90%;
+    margin: 0px 10px;
 }
 .wrap-date{
     /* border: 1px solid black; */
@@ -113,7 +113,6 @@
 .img-size-view{
     width: 24%;
     height: 350px;
-    border: 2px solid #D5271D;
     margin: 5px;
 }
 @media only screen and (max-width: 992px) {
@@ -149,5 +148,5 @@
     font-weight: bold;
     width: 200px!important;
     height: 50px;
-    margin: 50px;
+    margin: 10px;
 }
