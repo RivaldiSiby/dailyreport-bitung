@@ -32,8 +32,8 @@ function Home() {
   };
 
   const checkday = (day) => {
-    let days = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"];
-    return days[day - 1];
+    let days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+    return days[day];
   };
   const checkmonth = (mont) => {
     let months = [
@@ -62,9 +62,21 @@ function Home() {
       });
       return;
     }
+    let countNull = 0;
+    imgList.map((v) => (v !== "" ? (countNull += 1) : ""));
+    // check img
+    if (countNull === 0) {
+      Swal.fire({
+        title: "Pemberitahuan!",
+        text: "Gambar harus dimasukan minimal 1 gambar",
+        icon: "error",
+        confirmButtonText: "Periksa Kembali",
+      });
+      return;
+    }
     let newdate = new Date(date);
     let datefix = `${checkday(
-      newdate.getDay()
+      newdate.getUTCDay()
     )}, ${newdate.getDate()} ${checkmonth(
       newdate.getMonth()
     )} ${newdate.getFullYear()}`;
