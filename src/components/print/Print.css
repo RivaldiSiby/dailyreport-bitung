@@ -124,8 +124,8 @@
     background-color: #D5271D;
     top:0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .btn-cos{
@@ -146,26 +146,17 @@
     }   
 }
 
-@media only screen and (max-width: 767px) {
-   .box-generate{
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding-left: 40vh;
-    padding-top: 40vh;
-   }
-}
 @media only screen and (max-width: 567px) {
-    .box-generate{
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        padding-left: 25vh;
-        padding-top: 40vh;
-       }
     .img-size-view{
         width: 75%;
         height: 350px;
         margin-bottom: 20px;
     }   
+    .btn-cos{
+        font-size: 14px!important;
+        font-weight: bold;
+        width: 100px!important;
+        height: 50px;
+        margin: 10px;
+    }
 }
